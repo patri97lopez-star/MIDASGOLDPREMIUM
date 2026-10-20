@@ -1,0 +1,6 @@
+{
+  "name": "Midas Gold | Joyería y Damasquinado de Toledo",
+  "description": "Renovación moderna y lujosa de Midas Gold Toledo: Damasquinado de alta joyería en oro de 24K y 18K, colecciones de mujer, caballero, hogar y piezas de arte hechas a mano en Toledo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

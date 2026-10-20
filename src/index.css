@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cinzel", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+
+.font-display {
+  font-family: "Cinzel", Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+.gold-text-gradient {
+  background: linear-gradient(135deg, #f9f2d5 0%, #e2be67 35%, #d4af37 60%, #996e1b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-text-subtle {
+  background: linear-gradient(135deg, #efe8d8 0%, #d8be7e 50%, #c49d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.luxury-card-border {
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.luxury-card-border:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c10;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.45);
+}
