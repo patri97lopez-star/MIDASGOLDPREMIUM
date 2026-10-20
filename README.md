@@ -132,14 +132,14 @@ Este proyecto es una reinterpretación de alta gama de la web original [midasgol
 
 ## 📦 Instrucciones para Subir a GitHub
 
-El repositorio remoto ya ha sido vinculado a tu repositorio de GitHub:
-`https://github.com/patri97lopez-star/midasgold.git`
+El repositorio remoto ya ha sido vinculado a tu nuevo repositorio oficial de GitHub:
+`https://github.com/patri97lopez-star/MIDASGOLDPREMIUM.git`
 
 Para subir el código a GitHub desde tu terminal local o mediante un token:
 
 ```bash
 # Opción 1: Con Personal Access Token (PAT)
-git remote set-url origin https://<TU_GITHUB_TOKEN>@github.com/patri97lopez-star/midasgold.git
+git remote set-url origin https://<TU_GITHUB_TOKEN>@github.com/patri97lopez-star/MIDASGOLDPREMIUM.git
 git push -u origin main
 
 # Opción 2: Si ya tienes tus credenciales de GitHub configuradas en tu terminal
@@ -154,7 +154,7 @@ El proyecto incluye la configuración predeterminada `vercel.json` para Vite SPA
 
 1. Inicia sesión en [Vercel](https://vercel.com/).
 2. Haz clic en **"Add New..."** → **"Project"**.
-3. Selecciona tu repositorio: `patri97lopez-star/midasgold`.
+3. Selecciona tu repositorio: `patri97lopez-star/MIDASGOLDPREMIUM`.
 4. Vercel detectará automáticamente el framework como **Vite**, el directorio de salida como **`dist`** y el comando **`npm run build`**.
 5. Haz clic en **"Deploy"**. En menos de 60 segundos tu web estará en vivo con HTTPS y dominio gratuito `.vercel.app`.
 
