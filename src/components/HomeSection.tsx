@@ -32,7 +32,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
   const HERO_SLIDES = [
     {
       id: 'slide-1',
-      image: '/src/assets/images/hero_damascene_gold_1791902042124.jpg',
+      image: '/assets/images/hero_damascene_gold_1791902042124.jpg',
       badge: 'Toledo, España · Cuna Imperial del Damasquinado',
       titlePrefix: 'El Renacer del',
       titleHighlight: 'Damasquinado',
@@ -47,7 +47,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
     },
     {
       id: 'slide-2',
-      image: '/src/assets/images/midas_artisan_workshop_1791902044234.jpg',
+      image: '/assets/images/midas_artisan_workshop_1791902044234.jpg',
       badge: 'Taller Artesano · Tradición Gremial desde el Siglo VIII',
       titlePrefix: 'El Alma y Oficio de',
       titleHighlight: 'Maestros',
@@ -62,7 +62,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
     },
     {
       id: 'slide-3',
-      image: '/src/assets/images/jewelry_necklace_earrings_1791902044385.jpg',
+      image: '/assets/images/jewelry_necklace_earrings_1791902044385.jpg',
       badge: 'Alta Joyería Femenina · Colección Renacimiento',
       titlePrefix: 'Flores, Aves del Paraíso y',
       titleHighlight: 'Elegancia',
@@ -77,7 +77,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
     },
     {
       id: 'slide-4',
-      image: '/src/assets/images/mens_cufflinks_zippo_1791902044581.jpg',
+      image: '/assets/images/mens_cufflinks_zippo_1791902044581.jpg',
       badge: 'Colección Caballero · Distinción y Coleccionismo',
       titlePrefix: 'Zippos Oficiales, Gemelos y',
       titleHighlight: 'Nobleza',
@@ -92,7 +92,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
     },
     {
       id: 'slide-5',
-      image: '/src/assets/images/decorative_damascene_plate_1791902080741.jpg',
+      image: '/assets/images/decorative_damascene_plate_1791902080741.jpg',
       badge: 'Colección Hogar & Protocolo Institucional',
       titlePrefix: 'Platos Mudéjares, Abrecartas y',
       titleHighlight: 'Piezas de Arte',
@@ -439,7 +439,7 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
 
           <div className="relative min-h-[360px] lg:min-h-full">
             <img
-              src="/src/assets/images/midas_artisan_workshop_1791902044234.jpg"
+              src="/assets/images/midas_artisan_workshop_1791902044234.jpg"
               alt="Maestro damasquinador en el taller de Midas Gold Toledo"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

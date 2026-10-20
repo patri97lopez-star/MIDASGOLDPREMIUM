@@ -120,7 +120,7 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5 relative">
             <div className="aspect-[4/3] rounded-sm overflow-hidden border border-[#d4af37]/30 bg-[#12141a] shadow-2xl">
               <img
-                src="/src/assets/images/midas_artisan_workshop_1791902044234.jpg"
+                src="/assets/images/midas_artisan_workshop_1791902044234.jpg"
                 alt="Maestro damasquinador en el taller de Midas Gold Toledo"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -206,7 +206,7 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
             </div>
             <div className="lg:col-span-5 aspect-square bg-[#0b0c10] border border-[#d4af37]/20 rounded-sm overflow-hidden">
               <img
-                src="/src/assets/images/hero_damascene_gold_1791902042124.jpg"
+                src="/assets/images/hero_damascene_gold_1791902042124.jpg"
                 alt="Damasquinado toledano estilo árabe con oro de 24K"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -242,7 +242,7 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
             </div>
             <div className="lg:col-span-5 aspect-square bg-[#0b0c10] border border-[#d4af37]/20 rounded-sm overflow-hidden">
               <img
-                src="/src/assets/images/damascene_bracelets_rings_1791902081179.jpg"
+                src="/assets/images/damascene_bracelets_rings_1791902081179.jpg"
                 alt="Damasquinado estilo renacimiento con flores y aves en oro de 24K"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
