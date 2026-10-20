@@ -132,24 +132,31 @@ Este proyecto es una reinterpretación de alta gama de la web original [midasgol
 
 ## 📦 Instrucciones para Subir a GitHub
 
-Si deseas publicar este proyecto en un nuevo repositorio de GitHub:
+El repositorio remoto ya ha sido vinculado a tu repositorio de GitHub:
+`https://github.com/patri97lopez-star/midasgold.git`
+
+Para subir el código a GitHub desde tu terminal local o mediante un token:
 
 ```bash
-# 1. Inicializar git (si no está inicializado)
-git init -b main
+# Opción 1: Con Personal Access Token (PAT)
+git remote set-url origin https://<TU_GITHUB_TOKEN>@github.com/patri97lopez-star/midasgold.git
+git push -u origin main
 
-# 2. Agregar todos los archivos
-git add .
-
-# 3. Crear el primer commit
-git commit -m "feat: lanzamiento oficial de Midas Gold Toledo"
-
-# 4. Vincular tu repositorio remoto de GitHub (reemplaza con tu URL)
-git remote add origin https://github.com/TU_USUARIO/midas-gold-toledo.git
-
-# 5. Subir a GitHub
+# Opción 2: Si ya tienes tus credenciales de GitHub configuradas en tu terminal
 git push -u origin main
 ```
+
+---
+
+## 🚀 Despliegue en Vercel (1 Clic)
+
+El proyecto incluye la configuración predeterminada `vercel.json` para Vite SPA:
+
+1. Inicia sesión en [Vercel](https://vercel.com/).
+2. Haz clic en **"Add New..."** → **"Project"**.
+3. Selecciona tu repositorio: `patri97lopez-star/midasgold`.
+4. Vercel detectará automáticamente el framework como **Vite**, el directorio de salida como **`dist`** y el comando **`npm run build`**.
+5. Haz clic en **"Deploy"**. En menos de 60 segundos tu web estará en vivo con HTTPS y dominio gratuito `.vercel.app`.
 
 ---
 
