@@ -5,6 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ActiveTab, CartItem, Product } from './types';
+import { DemoStoreProvider } from './context/DemoStoreContext';
 import { Navbar } from './components/Navbar';
 import { HomeSection } from './components/HomeSection';
 import { MidasSection } from './components/MidasSection';
@@ -14,17 +15,20 @@ import { ContactoSection } from './components/ContactoSection';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
+import { AdminLayout } from './components/admin/AdminLayout';
+import { Sparkles, ArrowRight } from 'lucide-react';
 
-export default function App() {
+function MidasStoreApp() {
+  const [viewMode, setViewMode] = useState<'store' | 'admin'>('store');
   const [activeTab, setActiveTab] = useState<ActiveTab>('home');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
 
-  // Scroll to top whenever active tab changes
+  // Scroll to top whenever active tab or viewMode changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [activeTab]);
+  }, [activeTab, viewMode]);
 
   const handleAddToCart = (product: Product, quantity: number = 1, size?: string) => {
     setCart((prev) => {
@@ -67,14 +71,21 @@ export default function App() {
 
   const totalCartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
+  // Render Admin Management Demonstration
+  if (viewMode === 'admin') {
+    return <AdminLayout onReturnToStore={() => setViewMode('store')} />;
+  }
+
+  // Render Public Luxury Store
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-[#e8e6e3] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#f5ebd7]">
+    <div className="min-h-screen bg-[#0b0c10] text-[#e8e6e3] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#f5ebd7] relative">
       {/* Navigation */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         cartCount={totalCartCount}
         onOpenCart={() => setIsCartOpen(true)}
+        onOpenAdmin={() => setViewMode('admin')}
       />
 
       {/* Main Content Area */}
@@ -127,8 +138,34 @@ export default function App() {
         onClearCart={handleClearCart}
       />
 
-      {/* Footer */}
-      <Footer onNavigate={setActiveTab} />
+      {/* Discreet Floating Demo Switcher (Bottom Right) */}
+      <div className="fixed bottom-5 right-5 z-30">
+        <button
+          onClick={() => setViewMode('admin')}
+          className="flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-full bg-[#13141a]/95 text-[#f5ebd7] border border-[#d4af37]/50 hover:border-[#d4af37] shadow-2xl backdrop-blur-md hover:bg-[#1f2128] active:scale-95 transition-all cursor-pointer group"
+          title="Abrir panel interactivo de gestión comercial (Demostración)"
+        >
+          <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse"></span>
+          <span className="text-[#c5c1b8] group-hover:text-white transition-colors">
+            Ver panel de gestión · Demo
+          </span>
+          <ArrowRight className="w-3.5 h-3.5 text-[#d4af37] group-hover:translate-x-0.5 transition-transform" />
+        </button>
+      </div>
+
+      {/* Footer with Discreet Demo Access */}
+      <Footer
+        onNavigate={setActiveTab}
+        onOpenAdmin={() => setViewMode('admin')}
+      />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <DemoStoreProvider>
+      <MidasStoreApp />
+    </DemoStoreProvider>
   );
 }

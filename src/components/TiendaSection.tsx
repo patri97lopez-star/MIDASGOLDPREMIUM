@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Product } from '../types';
-import { PRODUCTS, COMPANY_INFO, OFFICIAL_CATEGORIES } from '../data/products';
+import { COMPANY_INFO, OFFICIAL_CATEGORIES } from '../data/products';
+import { useDemoStore } from '../context/DemoStoreContext';
 import {
   Search,
   SlidersHorizontal,
@@ -25,13 +26,16 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
   onSelectProduct,
   onAddToCart,
 }) => {
+  const { products } = useDemoStore();
   const [selectedCategory, setSelectedCategory] = useState<string>('todos');
   const [selectedStyle, setSelectedStyle] = useState<string>('todos');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [sortBy, setSortBy] = useState<'featured' | 'price-asc' | 'price-desc'>('featured');
   const [activePolicyTab, setActivePolicyTab] = useState<'como-comprar' | 'envios' | 'devoluciones' | 'pagos'>('como-comprar');
 
-  const filteredProducts = PRODUCTS.filter((product) => {
+  const filteredProducts = products.filter((product) => {
+    // Only published products in public store
+    if (product.published === false) return false;
     const matchesCategory =
       selectedCategory === 'todos' || product.category === selectedCategory;
     const matchesStyle =

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Product, ProductStyle } from '../types';
-import { PRODUCTS, OFFICIAL_CATEGORIES, COMPANY_INFO } from '../data/products';
+import { OFFICIAL_CATEGORIES, COMPANY_INFO } from '../data/products';
+import { useDemoStore } from '../context/DemoStoreContext';
 import { Download, Search, Check, FileText, Filter, Sparkles } from 'lucide-react';
 
 interface CatalogoSectionProps {
@@ -12,6 +13,7 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
   onSelectProduct,
   onAddToCart,
 }) => {
+  const { products } = useDemoStore();
   const [selectedMainCategory, setSelectedMainCategory] = useState<string>('todos');
   const [selectedSubCategory, setSelectedSubCategory] = useState<string>('todos');
   const [selectedStyle, setSelectedStyle] = useState<string>('todos');
@@ -23,7 +25,8 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
   const activeCategoryObj = OFFICIAL_CATEGORIES.find((c) => c.id === selectedMainCategory);
   const availableSubcategories = activeCategoryObj ? activeCategoryObj.items : [];
 
-  const filteredProducts = PRODUCTS.filter((product) => {
+  const filteredProducts = products.filter((product) => {
+    if (product.published === false) return false;
     const matchesMain =
       selectedMainCategory === 'todos' || product.category === selectedMainCategory;
     const matchesSub =

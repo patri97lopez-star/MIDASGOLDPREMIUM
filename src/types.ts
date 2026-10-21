@@ -19,6 +19,8 @@ export interface Product {
   shortDesc: string;
   longDesc: string;
   availableSizes?: string[]; // for rings
+  stock?: number; // unidades en existencia ficticias para la demo
+  published?: boolean; // visibilidad en tienda pública
   specifications: {
     oro: string; // "Oro fino 24K (999‰) y oro verde 18K"
     espesor: string; // "Mínimo 4 micras garantizadas"
@@ -37,3 +39,50 @@ export interface CartItem {
   selectedSize?: string;
 }
 
+// Demo Management Types
+export type OrderStatus = 'pendiente_pago' | 'en_proceso' | 'completado' | 'cancelado';
+
+export interface OrderItem {
+  productId: string;
+  productName: string;
+  reference: string;
+  price: number;
+  quantity: number;
+  selectedSize?: string;
+  image?: string;
+}
+
+export interface Order {
+  id: string; // e.g. "MG-TOL-2026-101"
+  date: string;
+  customerName: string;
+  customerEmail: string;
+  customerPhone: string;
+  shippingAddress: {
+    street: string;
+    city: string;
+    postalCode: string;
+    country: string;
+  };
+  paymentMethod: string;
+  status: OrderStatus;
+  items: OrderItem[];
+  subtotal: number;
+  shippingCost: number;
+  total: number;
+  internalNotes?: { id: string; date: string; text: string }[];
+  refundNotice?: string;
+}
+
+export interface CustomerSummary {
+  name: string;
+  email: string;
+  phone: string;
+  city: string;
+  ordersCount: number;
+  totalSpent: number;
+  firstOrderDate: string;
+  lastOrderDate: string;
+}
+
+export type AdminTab = 'resumen' | 'productos' | 'pedidos' | 'clientes' | 'configuracion';

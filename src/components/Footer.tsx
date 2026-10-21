@@ -7,9 +7,10 @@ import { MidasLogo } from './MidasLogo';
 
 interface FooterProps {
   onNavigate: (tab: ActiveTab) => void;
+  onOpenAdmin?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
   return (
     <footer className="bg-[#08090d] border-t border-[#d4af37]/20 text-xs text-[#8e897e]">
       <div className="max-w-7xl mx-auto px-6 py-16">
@@ -73,6 +74,16 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   Contacto & Cita en Toledo
                 </button>
               </li>
+              {onOpenAdmin && (
+                <li className="pt-2 border-t border-[#d4af37]/10">
+                  <button
+                    onClick={onOpenAdmin}
+                    className="text-[#b5af9f] hover:text-[#d4af37] transition-colors cursor-pointer flex items-center gap-1.5"
+                  >
+                    <span>Ver panel de gestión · Demo</span>
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
 

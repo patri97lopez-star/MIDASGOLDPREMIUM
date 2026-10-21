@@ -9,6 +9,7 @@ interface NavbarProps {
   setActiveTab: (tab: ActiveTab) => void;
   cartCount: number;
   onOpenCart: () => void;
+  onOpenAdmin?: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -16,6 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   setActiveTab,
   cartCount,
   onOpenCart,
+  onOpenAdmin,
 }) => {
   const navItems: { id: ActiveTab; label: string }[] = [
     { id: 'home', label: 'Home' },
@@ -27,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-[#0b0c10]/95 backdrop-blur-md border-b border-[#d4af37]/25 transition-all">
-      <div className="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between gap-8">
+      <div className="max-w-7xl mx-auto px-6 h-22 flex items-center justify-between gap-6">
         {/* Zone 1: Official Midas Gold Logo with Stylized Crown */}
         <button
           onClick={() => setActiveTab('home')}
@@ -60,11 +62,23 @@ export const Navbar: React.FC<NavbarProps> = ({
           })}
         </nav>
 
-        {/* Zone 3: 1 Primary Action (Bolsa de compra) */}
-        <div className="flex items-center gap-4 shrink-0">
+        {/* Zone 3: Actions - Discreet Management Demo Link & Shopping Bag */}
+        <div className="flex items-center gap-3 shrink-0">
+          {onOpenAdmin && (
+            <button
+              onClick={onOpenAdmin}
+              className="text-[11px] uppercase tracking-wider text-[#a8a396] hover:text-[#f5ebd7] border border-[#d4af37]/35 hover:border-[#d4af37] px-2.5 py-1.5 rounded-sm transition-all flex items-center gap-1.5 cursor-pointer bg-[#13151c]/60 hover:bg-[#1a1d26]"
+              title="Demostración de gestión comercial de tienda online"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#d4af37]" />
+              <span className="hidden sm:inline">Ver panel de gestión · Demo</span>
+              <span className="sm:hidden">Panel Demo</span>
+            </button>
+          )}
+
           <button
             onClick={onOpenCart}
-            className="flex items-center gap-2.5 px-4 py-2 text-xs uppercase tracking-[0.16em] font-medium text-[#0b0c10] bg-gradient-to-r from-[#e7cb76] via-[#d4af37] to-[#b38a22] hover:brightness-110 active:scale-95 transition-all shadow-[0_2px_15px_rgba(212,175,55,0.3)] rounded-sm cursor-pointer whitespace-nowrap shrink-0"
+            className="flex items-center gap-2 px-3.5 py-2 text-xs uppercase tracking-[0.16em] font-medium text-[#0b0c10] bg-gradient-to-r from-[#e7cb76] via-[#d4af37] to-[#b38a22] hover:brightness-110 active:scale-95 transition-all shadow-[0_2px_15px_rgba(212,175,55,0.3)] rounded-sm cursor-pointer whitespace-nowrap shrink-0"
             aria-label="Abrir bolsa de compras"
           >
             <ShoppingBag className="w-4 h-4 text-[#0b0c10]" />

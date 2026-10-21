@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ActiveTab, Product } from '../types';
-import { PRODUCTS, COMPANY_INFO, OFFICIAL_CATEGORIES } from '../data/products';
+import { COMPANY_INFO, OFFICIAL_CATEGORIES } from '../data/products';
+import { useDemoStore } from '../context/DemoStoreContext';
 import { MidasLogo } from './MidasLogo';
 import {
   ArrowRight,
@@ -127,7 +128,8 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
     setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
   };
 
-  const featuredProducts = PRODUCTS.filter((p) => p.featured).slice(0, 4);
+  const { products } = useDemoStore();
+  const featuredProducts = products.filter((p) => p.featured && p.published !== false).slice(0, 4);
   const activeSlideData = HERO_SLIDES[currentSlide];
 
   return (
