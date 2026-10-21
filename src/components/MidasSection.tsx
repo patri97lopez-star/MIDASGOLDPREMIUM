@@ -58,23 +58,24 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-28 pb-24">
       {/* Header Banner with Official Midas Logo */}
-      <section className="relative py-20 border-b border-[#d4af37]/20 bg-[#0e1015]">
-        <div className="max-w-5xl mx-auto px-6 text-center space-y-5">
+      <section className="relative py-20 border-b border-[#d4af37]/20 bg-[#0a0b10]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#d4af37]/8 blur-[120px] pointer-events-none rounded-full"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-5">
           <div className="flex justify-center mb-2">
             <MidasLogo size="md" showSubtitle={false} />
           </div>
-          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[#d4af37]">
-            <span className="w-8 h-[1px] bg-[#d4af37]"></span>
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141d]/70 border border-[#d4af37]/25">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
             <span>Midas Gold · Toledo, España</span>
-            <span className="w-8 h-[1px] bg-[#d4af37]"></span>
           </div>
-          <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold text-[#f5ebd7] leading-tight">
+          <h1 className="font-display text-3xl sm:text-5xl md:text-6xl font-bold text-[#faf5eb] leading-tight">
             Midas: Historia, Alma y Damasquinado de Toledo
           </h1>
-          <p className="text-base sm:text-lg text-[#bbb5a7] max-w-3xl mx-auto font-light leading-relaxed">
-            Continuamos la milenaria tradición del Damasquinado toledano. Fundada por <strong className="text-[#f3e5ab] font-medium">{COMPANY_INFO.legalName}</strong>, Midas Gold une el saber ancestral de los maestros orfebres con las tecnologías y exigencias de la alta joyería contemporánea.
+          <p className="text-base sm:text-lg text-[#bfb8a8] max-w-3xl mx-auto font-light leading-relaxed font-editorial italic text-lg sm:text-xl">
+            «Continuamos la milenaria tradición del Damasquinado toledano. Fundada por <strong className="text-[#f6eccd] font-normal not-italic">{COMPANY_INFO.legalName}</strong>, Midas Gold une el saber ancestral de los maestros orfebres con las exigencias y belleza de la alta joyería contemporánea.»
           </p>
         </div>
       </section>
@@ -83,18 +84,18 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
       <section className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-xs uppercase tracking-[0.25em] text-[#d4af37] font-semibold">
+            <span className="text-xs uppercase tracking-[0.28em] text-[#d4af37] font-semibold">
               El Arte Milenario en Toledo
             </span>
-            <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#f5ebd7] leading-tight">
+            <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#faf5eb] leading-tight">
               Introducido por los árabes en el siglo VIII en la Ciudad Imperial
             </h2>
-            <div className="space-y-4 text-sm text-[#9c978b] leading-relaxed">
+            <div className="space-y-4 text-sm sm:text-base text-[#a8a192] leading-relaxed font-light">
               <p>
                 El arte del damasquinado fue introducido en Toledo por los árabes durante su invasión en el siglo VIII, contribuyendo de forma decisiva a la renombrada tradición metalúrgica y armera toledana. A lo largo de los siglos, Toledo se convirtió en crisol de civilizaciones donde la pericia de sus herreros y la delicadeza de sus orfebres forjaron una fama universal.
               </p>
               <p>
-                <strong className="text-[#f3e5ab] font-medium">{COMPANY_INFO.name}</strong> nació para dar continuidad a este oficio legendario. Frente a las imitaciones químicas y las estampaciones industriales que desvirtúan la tradición, en nuestro taller garantizamos que cada producto se fabrica íntegramente en Toledo, con <strong className="text-[#ede8dc]">oro de 24 quilates amarillo y 18 quilates verde</strong>, asegurando un espesor mínimo de <strong className="text-[#ede8dc]">4 micras</strong>.
+                <strong className="text-[#f6eccd] font-medium">{COMPANY_INFO.name}</strong> nació para dar continuidad a este oficio legendario. Frente a las imitaciones químicas y las estampaciones industriales que desvirtúan la tradición, en nuestro taller garantizamos que cada producto se fabrica íntegramente en Toledo, con <strong className="text-[#faf5eb] font-medium">oro de 24 quilates amarillo y 18 quilates verde</strong>, asegurando un espesor mínimo de <strong className="text-[#faf5eb] font-medium">4 micras</strong>.
               </p>
               <p>
                 Nuestra filosofía se basa en un compromiso inquebrantable: tratar a nuestros clientes con profundo respeto y honestidad, ofreciendo piezas de altísima calidad bajo una conducta rigurosamente ética, con la aspiración de ser el motor que dé a conocer el damasquinado toledano en todos los rincones del mundo.
@@ -104,13 +105,13 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
             <div className="pt-4 flex flex-wrap gap-4">
               <button
                 onClick={() => onNavigate('tienda')}
-                className="px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold text-[#0b0c10] bg-[#d4af37] hover:bg-[#e4c35b] transition-all rounded-sm cursor-pointer whitespace-nowrap"
+                className="px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 active:scale-98 transition-all shadow-[0_4px_20px_rgba(212,175,55,0.4)] rounded-xs cursor-pointer whitespace-nowrap"
               >
                 Comprar en Tienda
               </button>
               <button
                 onClick={() => onNavigate('catalogo')}
-                className="px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold text-[#f5ebd7] border border-[#d4af37]/35 hover:border-[#d4af37] transition-all rounded-sm cursor-pointer whitespace-nowrap"
+                className="px-8 py-3.5 text-xs uppercase tracking-[0.18em] font-semibold text-[#f5ebd7] border border-[#d4af37]/45 hover:border-[#d4af37] hover:bg-[#d4af37]/15 bg-[#10121a]/60 transition-all rounded-xs cursor-pointer whitespace-nowrap"
               >
                 Ver Catálogo Oficial
               </button>
@@ -118,7 +119,7 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
           </div>
 
           <div className="lg:col-span-5 relative">
-            <div className="aspect-[4/3] rounded-sm overflow-hidden border border-[#d4af37]/30 bg-[#12141a] shadow-2xl">
+            <div className="aspect-[4/3] rounded-xs overflow-hidden border border-[#d4af37]/35 bg-[#141620] shadow-[0_16px_40px_-10px_rgba(0,0,0,0.9)]">
               <img
                 src="/assets/images/midas_artisan_workshop_1791902044234.jpg"
                 alt="Maestro damasquinador en el taller de Midas Gold Toledo"
@@ -126,8 +127,8 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="mt-4 p-4 bg-[#101217] border border-[#d4af37]/15 rounded-sm flex items-center justify-between text-xs text-[#8f8a7e]">
-              <span className="text-[#d4af37] font-medium uppercase tracking-wider">
+            <div className="mt-4 p-4 bg-[#0e0f16] border border-[#d4af37]/20 rounded-xs flex items-center justify-between text-xs text-[#918a7c]">
+              <span className="text-[#d4af37] font-semibold uppercase tracking-wider">
                 Taller Oficial {COMPANY_INFO.legalName}
               </span>
               <span>C/ Río Jarama 132, Toledo</span>
@@ -138,37 +139,37 @@ export const MidasSection: React.FC<MidasSectionProps> = ({ onNavigate }) => {
 
       {/* Los Dos Grandes Estilos Toledanos: Árabe vs Renacimiento (Real from midasgold.es) */}
       <section className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
-          <span className="text-xs uppercase tracking-[0.25em] text-[#d4af37] font-semibold">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <span className="text-xs uppercase tracking-[0.28em] text-[#d4af37] font-semibold">
             Doble Tradición Artística
           </span>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#f5ebd7]">
+          <h2 className="font-display text-2xl sm:text-4xl font-bold text-[#faf5eb]">
             Los Dos Estilos del Damasquinado de Toledo
           </h2>
-          <p className="text-sm text-[#9c978b]">
+          <p className="text-sm sm:text-base text-[#a8a192] font-light">
             En Midas Gold cultivamos con igual reverencia las dos corrientes históricas que definen el arte toledano: la pureza geométrica árabe y la exuberancia renacentista.
           </p>
         </div>
 
         {/* Style Selector Tabs */}
         <div className="flex justify-center mb-8">
-          <div className="inline-flex p-1 bg-[#12141c] border border-[#d4af37]/20 rounded-sm">
+          <div className="inline-flex p-1 bg-[#10121a] border border-[#d4af37]/25 rounded-xs">
             <button
               onClick={() => setActiveStyleTab('arabe')}
-              className={`px-6 py-2.5 text-xs uppercase tracking-[0.16em] font-medium rounded-sm transition-colors cursor-pointer ${
+              className={`px-6 py-2.5 text-xs uppercase tracking-[0.16em] font-semibold rounded-xs transition-all cursor-pointer ${
                 activeStyleTab === 'arabe'
-                  ? 'bg-[#d4af37] text-[#0b0c10] font-semibold'
-                  : 'text-[#8e897e] hover:text-[#ede8dc]'
+                  ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-xs'
+                  : 'text-[#918a7c] hover:text-[#ede8dc]'
               }`}
             >
               01. Estilo Árabe / Mudéjar (El Más Genuino)
             </button>
             <button
               onClick={() => setActiveStyleTab('renacimiento')}
-              className={`px-6 py-2.5 text-xs uppercase tracking-[0.16em] font-medium rounded-sm transition-colors cursor-pointer ${
+              className={`px-6 py-2.5 text-xs uppercase tracking-[0.16em] font-semibold rounded-xs transition-all cursor-pointer ${
                 activeStyleTab === 'renacimiento'
-                  ? 'bg-[#d4af37] text-[#0b0c10] font-semibold'
-                  : 'text-[#8e897e] hover:text-[#ede8dc]'
+                  ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-xs'
+                  : 'text-[#918a7c] hover:text-[#ede8dc]'
               }`}
             >
               02. Estilo Renacimiento (Flores & Aves)

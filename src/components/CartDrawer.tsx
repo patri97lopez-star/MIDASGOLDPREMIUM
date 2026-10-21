@@ -71,12 +71,12 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
       ></div>
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#0e1015] border-l border-[#d4af37]/30 shadow-2xl flex flex-col justify-between">
+        <div className="w-screen max-w-md bg-[#0e0f16] border-l border-[#d4af37]/30 shadow-[0_0_50px_rgba(0,0,0,0.9)] flex flex-col justify-between">
           {/* Header */}
-          <div className="p-6 border-b border-[#d4af37]/20 flex items-center justify-between bg-[#12141c]">
+          <div className="p-6 border-b border-[#d4af37]/20 flex items-center justify-between bg-[#10121a]">
             <div className="flex items-center gap-2.5">
               <ShoppingBag className="w-5 h-5 text-[#d4af37]" />
-              <h2 className="font-display text-base font-bold text-[#f5ebd7] uppercase tracking-wider">
+              <h2 className="font-display text-base font-bold text-[#faf5eb] uppercase tracking-wider">
                 {checkoutStep === 'cart' && 'Cesta de la Compra'}
                 {checkoutStep === 'checkout' && 'Finalizar Compra'}
                 {checkoutStep === 'confirmed' && 'Pedido Confirmado'}
@@ -84,7 +84,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             </div>
             <button
               onClick={onClose}
-              className="p-1.5 text-[#8e897e] hover:text-[#f5ebd7] cursor-pointer"
+              className="p-1.5 text-[#918a7c] hover:text-[#ffffff] cursor-pointer transition-colors"
               aria-label="Cerrar cesta"
             >
               <X className="w-5 h-5" />
@@ -387,25 +387,25 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
               {checkoutStep === 'cart' ? (
                 <button
                   onClick={() => setCheckoutStep('checkout')}
-                  className="w-full py-3.5 px-4 text-xs uppercase tracking-[0.2em] font-semibold text-[#0b0c10] bg-gradient-to-r from-[#edd488] via-[#d4af37] to-[#b38612] hover:brightness-110 active:scale-98 transition-all rounded-sm cursor-pointer flex items-center justify-center gap-2"
+                  className="w-full py-4 px-4 text-xs uppercase tracking-[0.2em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 active:scale-98 transition-all shadow-[0_4px_20px_rgba(212,175,55,0.4)] rounded-xs cursor-pointer flex items-center justify-center gap-2"
                 >
                   <span>Finalizar Compra</span>
-                  <ArrowRight className="w-4 h-4 text-[#0b0c10]" />
+                  <ArrowRight className="w-4 h-4 text-[#08080a]" />
                 </button>
               ) : (
                 <div className="flex gap-2">
                   <button
                     onClick={() => setCheckoutStep('cart')}
-                    className="py-3 px-4 text-xs uppercase tracking-wider text-[#8e897e] border border-[#d4af37]/20 hover:text-[#ede8dc] rounded-sm cursor-pointer"
+                    className="py-3 px-4 text-xs uppercase tracking-wider text-[#918a7c] border border-[#d4af37]/20 hover:text-[#ede8dc] rounded-xs cursor-pointer"
                   >
                     Atrás
                   </button>
                   <button
                     form="checkout-form"
                     type="submit"
-                    className="flex-1 py-3 px-4 text-xs uppercase tracking-[0.16em] font-semibold text-[#0b0c10] bg-[#d4af37] hover:bg-[#e4c45b] rounded-sm cursor-pointer flex items-center justify-center gap-1.5"
+                    className="flex-1 py-3.5 px-4 text-xs uppercase tracking-[0.16em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 rounded-xs cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
                   >
-                    <Lock className="w-3.5 h-3.5 text-[#0b0c10]" />
+                    <Lock className="w-3.5 h-3.5 text-[#08080a]" />
                     <span>Pagar con Seguridad {total.toFixed(2)} €</span>
                   </button>
                 </div>

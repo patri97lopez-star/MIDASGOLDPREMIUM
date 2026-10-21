@@ -50,12 +50,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#000000]/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-      <div className="bg-[#0e1015] border border-[#d4af37]/35 max-w-4xl w-full rounded-sm overflow-hidden shadow-2xl relative my-8">
+    <div className="fixed inset-0 z-50 bg-[#000000]/88 backdrop-blur-xl flex items-center justify-center p-4 overflow-y-auto">
+      <div className="bg-[#0e0f16] border border-[#d4af37]/35 max-w-4xl w-full rounded-xs overflow-hidden shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)] relative my-8">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-sm bg-[#0b0c10]/80 border border-[#d4af37]/30 text-[#8e897e] hover:text-[#f5ebd7] hover:border-[#d4af37] flex items-center justify-center cursor-pointer transition-colors"
+          className="absolute top-4 right-4 z-10 w-9 h-9 rounded-xs bg-[#08080a]/85 border border-[#d4af37]/35 text-[#a8a192] hover:text-[#ffffff] hover:border-[#d4af37] flex items-center justify-center cursor-pointer transition-colors"
           aria-label="Cerrar modal"
         >
           <X className="w-5 h-5" />
@@ -194,16 +194,16 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 <button
                   onClick={handleAdd}
                   disabled={added}
-                  className="flex-1 py-3 px-6 text-xs uppercase tracking-[0.2em] font-semibold text-[#0b0c10] bg-gradient-to-r from-[#edd488] via-[#d4af37] to-[#b38612] hover:brightness-110 active:scale-98 transition-all rounded-sm cursor-pointer flex items-center justify-center gap-2"
+                  className="flex-1 py-3.5 px-6 text-xs uppercase tracking-[0.2em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 active:scale-98 transition-all shadow-[0_4px_20px_rgba(212,175,55,0.4)] rounded-xs cursor-pointer flex items-center justify-center gap-2"
                 >
                   {added ? (
                     <>
-                      <Check className="w-4 h-4 text-[#0b0c10]" />
+                      <Check className="w-4 h-4 text-[#08080a]" />
                       <span>¡Añadido a la Cesta!</span>
                     </>
                   ) : (
                     <>
-                      <ShoppingBag className="w-4 h-4 text-[#0b0c10]" />
+                      <ShoppingBag className="w-4 h-4 text-[#08080a]" />
                       <span>Añadir a la Cesta · {(product.price * quantity).toFixed(2)} €</span>
                     </>
                   )}

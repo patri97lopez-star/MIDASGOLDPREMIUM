@@ -78,7 +78,7 @@ function MidasStoreApp() {
 
   // Render Public Luxury Store
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-[#e8e6e3] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#f5ebd7] relative">
+    <div className="min-h-screen bg-[#08080a] text-[#ede8dc] flex flex-col font-sans selection:bg-[#d4af37]/30 selection:text-[#f7eed9] relative">
       {/* Navigation */}
       <Navbar
         activeTab={activeTab}
@@ -142,11 +142,11 @@ function MidasStoreApp() {
       <div className="fixed bottom-5 right-5 z-30">
         <button
           onClick={() => setViewMode('admin')}
-          className="flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-full bg-[#13141a]/95 text-[#f5ebd7] border border-[#d4af37]/50 hover:border-[#d4af37] shadow-2xl backdrop-blur-md hover:bg-[#1f2128] active:scale-95 transition-all cursor-pointer group"
+          className="flex items-center gap-2 px-4 py-2 text-xs font-medium rounded-full bg-[#11131b]/95 text-[#ede8dc] border border-[#d4af37]/45 hover:border-[#d4af37] shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-md hover:bg-[#191b26] active:scale-95 transition-all cursor-pointer group"
           title="Abrir panel interactivo de gestión comercial (Demostración)"
         >
-          <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse"></span>
-          <span className="text-[#c5c1b8] group-hover:text-white transition-colors">
+          <span className="w-2 h-2 rounded-full bg-[#d4af37] shadow-[0_0_8px_rgba(212,175,55,0.8)] animate-pulse"></span>
+          <span className="text-[#c8c2b5] group-hover:text-[#ffffff] transition-colors">
             Ver panel de gestión · Demo
           </span>
           <ArrowRight className="w-3.5 h-3.5 text-[#d4af37] group-hover:translate-x-0.5 transition-transform" />

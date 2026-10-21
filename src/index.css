@@ -2,6 +2,8 @@
 
 @theme {
   --font-serif: "Cinzel", Georgia, serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Garamond, Georgia, serif;
   --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
@@ -10,44 +12,131 @@
   color-scheme: dark;
 }
 
+/* Typography styles */
 .font-display {
   font-family: "Cinzel", Georgia, serif;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
 }
 
+.font-editorial {
+  font-family: "Cormorant Garamond", Garamond, Georgia, serif;
+}
+
+/* Gold Text Gradients */
 .gold-text-gradient {
-  background: linear-gradient(135deg, #f9f2d5 0%, #e2be67 35%, #d4af37 60%, #996e1b 100%);
+  background: linear-gradient(135deg, #fff6de 0%, #ecd089 28%, #d4af37 58%, #a47a24 88%, #d9b867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-text-subtle {
-  background: linear-gradient(135deg, #efe8d8 0%, #d8be7e 50%, #c49d48 100%);
+  background: linear-gradient(135deg, #fbf7ee 0%, #e0c890 50%, #c49d48 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.gold-text-champagne {
+  background: linear-gradient(135deg, #ffffff 0%, #f6ebce 45%, #dbb765 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ambient Radial Backgrounds */
+.bg-luxury-dark {
+  background-color: #08080a;
+}
+
+.bg-luxury-surface {
+  background-color: #0e0f14;
+}
+
+.bg-luxury-elevated {
+  background-color: #14161f;
+}
+
+.bg-radial-gold-subtle {
+  background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, rgba(14, 15, 20, 0) 70%);
+}
+
+.bg-radial-gold-center {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.06) 0%, rgba(8, 8, 10, 0) 70%);
+}
+
+/* Luxury Borders & Shadows */
 .luxury-card-border {
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 12px 36px -12px rgba(0, 0, 0, 0.8), 0 0 20px -8px rgba(212, 175, 55, 0.08);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luxury-card-border:hover {
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: rgba(229, 195, 120, 0.5);
+  box-shadow: 0 16px 44px -10px rgba(0, 0, 0, 0.9), 0 0 30px -4px rgba(212, 175, 55, 0.18);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -4px rgba(212, 175, 55, 0.35);
+}
+
+.gold-glow-subtle {
+  box-shadow: 0 0 15px -3px rgba(212, 175, 55, 0.18);
+}
+
+/* Luxury Buttons */
+.btn-gold-primary {
+  background: linear-gradient(135deg, #f2de9b 0%, #d4af37 45%, #b68d27 100%);
+  color: #090a0d;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px -4px rgba(212, 175, 55, 0.35);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 26px -2px rgba(212, 175, 55, 0.55);
+  transform: translateY(-1px);
+}
+
+.btn-gold-primary:active {
+  transform: translateY(0);
+}
+
+.btn-gold-outline {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  color: #ecd9ad;
+  background: rgba(14, 15, 20, 0.6);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+}
+
+.btn-gold-outline:hover {
+  border-color: #d4af37;
+  color: #ffffff;
+  background: rgba(212, 175, 55, 0.12);
+  box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.25);
+  transform: translateY(-1px);
 }
 
 /* Custom smooth dark scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #0b0c10;
+  background: #08080a;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.25);
+  background: rgba(212, 175, 55, 0.3);
   border-radius: 9999px;
+  border: 1px solid rgba(8, 8, 10, 0.5);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 175, 55, 0.45);
+  background: rgba(212, 175, 55, 0.55);
 }

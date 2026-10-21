@@ -53,22 +53,26 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
   });
 
   return (
-    <div className="space-y-16 pb-20">
+    <div className="space-y-16 pb-24">
       {/* Header Banner */}
-      <section className="relative py-16 border-b border-[#d4af37]/20 bg-[#0e1015]">
-        <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
-            Boutique Oficial Online {COMPANY_INFO.name}
-          </span>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#f5ebd7]">
+      <section className="relative py-20 border-b border-[#d4af37]/20 bg-[#0a0b10]">
+        {/* Subtle Ambient Gold Radial Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#d4af37]/8 blur-[120px] pointer-events-none rounded-full"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141d]/70 border border-[#d4af37]/25">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
+            <span>Boutique Oficial Online {COMPANY_INFO.name}</span>
+          </div>
+          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#faf5eb]">
             Tienda Oficial Midas Gold Toledo
           </h1>
-          <p className="text-sm sm:text-base text-[#9c978b] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#a8a192] max-w-3xl mx-auto leading-relaxed font-light">
             Adquiera piezas originales de damasquinado toledano con garantía oficial de origen, oro fino de 24 quilates y 18 quilates verde embutido a mano (mínimo 4 micras garantizadas) y estuche de lujo con certificado nominativo.
           </p>
 
           {/* Real Guarantees Bar from midasgold.es */}
-          <div className="mt-8 pt-6 border-t border-[#d4af37]/15 flex flex-wrap items-center justify-center gap-6 text-xs text-[#9c978b] uppercase tracking-wider">
+          <div className="mt-8 pt-6 border-t border-[#d4af37]/15 flex flex-wrap items-center justify-center gap-6 text-xs text-[#a0998a] uppercase tracking-wider">
             <span className="flex items-center gap-2">
               <Truck className="w-4 h-4 text-[#d4af37]" /> Entrega en 3 Días con DHL
             </span>
@@ -93,13 +97,13 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
         {/* Controls Toolbar */}
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pb-6 border-b border-[#d4af37]/15">
           {/* Category Tabs */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0">
             <button
               onClick={() => setSelectedCategory('todos')}
-              className={`px-4 py-2 text-xs uppercase tracking-wider font-medium rounded-sm whitespace-nowrap transition-colors cursor-pointer ${
+              className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xs whitespace-nowrap transition-all cursor-pointer ${
                 selectedCategory === 'todos'
-                  ? 'bg-[#d4af37] text-[#0b0c10] font-semibold shadow-sm'
-                  : 'bg-[#12141c] text-[#8e897e] hover:text-[#e8e6e3] border border-[#d4af37]/10'
+                  ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-[0_2px_12px_rgba(212,175,55,0.35)]'
+                  : 'bg-[#10121a] text-[#938c7f] hover:text-[#ede8dc] border border-[#d4af37]/15 hover:border-[#d4af37]/40'
               }`}
             >
               Todas las Piezas
@@ -110,10 +114,10 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
                 <button
                   key={cat.id}
                   onClick={() => setSelectedCategory(cat.id)}
-                  className={`px-4 py-2 text-xs uppercase tracking-wider font-medium rounded-sm whitespace-nowrap transition-colors cursor-pointer ${
+                  className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xs whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#d4af37] text-[#0b0c10] font-semibold shadow-sm'
-                      : 'bg-[#12141c] text-[#8e897e] hover:text-[#e8e6e3] border border-[#d4af37]/10'
+                      ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-[0_2px_12px_rgba(212,175,55,0.35)]'
+                      : 'bg-[#10121a] text-[#938c7f] hover:text-[#ede8dc] border border-[#d4af37]/15 hover:border-[#d4af37]/40'
                   }`}
                 >
                   {cat.name}
@@ -124,14 +128,14 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
 
           {/* Search, Style & Sort */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            <div className="relative min-w-[200px]">
-              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8e897e]" />
+            <div className="relative min-w-[210px]">
+              <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8e887a]" />
               <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Buscar joya o pieza..."
-                className="w-full bg-[#12141c] border border-[#d4af37]/20 rounded-sm pl-10 pr-4 py-2 text-xs text-[#ede8dc] placeholder-[#6e695e] focus:outline-none focus:border-[#d4af37]"
+                className="w-full bg-[#10121a] border border-[#d4af37]/25 rounded-xs pl-10 pr-4 py-2.5 text-xs text-[#faf5eb] placeholder-[#7a7467] focus:outline-none focus:border-[#d4af37] transition-colors"
               />
             </div>
 
@@ -139,28 +143,28 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
               value={selectedStyle}
               onChange={(e) => setSelectedStyle(e.target.value)}
               aria-label="Filtrar por estilo"
-              className="bg-[#12141c] border border-[#d4af37]/20 px-3 py-2 rounded-sm text-xs text-[#ede8dc] focus:outline-none cursor-pointer"
+              className="bg-[#10121a] border border-[#d4af37]/25 px-3 py-2.5 rounded-xs text-xs text-[#ede8dc] focus:outline-none cursor-pointer"
             >
               <option value="todos">Todos los Estilos</option>
               <option value="arabe">Estilo Árabe (Geométrico)</option>
               <option value="renacimiento">Estilo Renacimiento (Floral)</option>
             </select>
 
-            <div className="flex items-center gap-2 bg-[#12141c] border border-[#d4af37]/20 px-3 py-2 rounded-sm text-xs text-[#bbb5a7]">
+            <div className="flex items-center gap-2 bg-[#10121a] border border-[#d4af37]/25 px-3 py-2.5 rounded-xs text-xs text-[#a0998a]">
               <SlidersHorizontal className="w-3.5 h-3.5 text-[#d4af37]" />
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
                 aria-label="Ordenar productos"
-                className="bg-transparent text-xs text-[#ede8dc] focus:outline-none cursor-pointer"
+                className="bg-transparent text-xs text-[#faf5eb] focus:outline-none cursor-pointer"
               >
-                <option value="featured" className="bg-[#12141c] text-[#ede8dc]">
+                <option value="featured" className="bg-[#10121a] text-[#faf5eb]">
                   Destacados
                 </option>
-                <option value="price-asc" className="bg-[#12141c] text-[#ede8dc]">
+                <option value="price-asc" className="bg-[#10121a] text-[#faf5eb]">
                   Precio: Menor a Mayor
                 </option>
-                <option value="price-desc" className="bg-[#12141c] text-[#ede8dc]">
+                <option value="price-desc" className="bg-[#10121a] text-[#faf5eb]">
                   Precio: Mayor a Menor
                 </option>
               </select>
@@ -169,11 +173,11 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
         </div>
 
         {/* Results metadata */}
-        <div className="py-2 flex items-center justify-between text-xs text-[#8e897e]">
+        <div className="py-2 flex items-center justify-between text-xs text-[#918a7c]">
           <span>
-            <strong className="text-[#f3e5ab] font-mono tabular-nums">{filteredProducts.length}</strong> joyas y creaciones disponibles para envío inmediato
+            <strong className="text-[#f5ebd7] font-mono tabular-nums">{filteredProducts.length}</strong> joyas y creaciones disponibles para envío inmediato
           </span>
-          <span>Entrega en estuche oficial de lujo con sello {COMPANY_INFO.name}</span>
+          <span className="hidden sm:inline">Entrega en estuche oficial de lujo con sello {COMPANY_INFO.name}</span>
         </div>
 
         {/* Products Grid */}
@@ -181,41 +185,41 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="group bg-[#0e1015] border border-[#d4af37]/15 rounded-sm overflow-hidden flex flex-col hover:border-[#d4af37]/45 transition-all duration-300"
+              className="group bg-[#0e0f16] border border-[#d4af37]/20 rounded-xs overflow-hidden flex flex-col hover:border-[#d4af37]/55 hover:shadow-[0_14px_40px_-12px_rgba(212,175,55,0.22)] transition-all duration-400"
             >
               {/* Product Visual Container */}
-              <div className="relative aspect-square bg-[#13151d] overflow-hidden">
+              <div className="relative aspect-square bg-[#141620] overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.name}
                   onClick={() => onSelectProduct(product)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                  className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out cursor-pointer"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1015] via-transparent to-transparent opacity-60 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0f16] via-transparent to-transparent opacity-65 pointer-events-none"></div>
 
                 {product.tag && (
-                  <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.16em] px-2.5 py-1 bg-[#0b0c10]/85 border border-[#d4af37]/30 text-[#f3e5ab]">
+                  <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 bg-[#08080a]/90 border border-[#d4af37]/40 text-[#f6eccd] font-semibold shadow-xs">
                     {product.tag}
                   </div>
                 )}
 
-                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#d4af37] bg-[#0b0c10]/80 px-2 py-0.5 border border-[#d4af37]/20">
+                <div className="absolute top-3 right-3 text-[10px] font-mono text-[#d4af37] bg-[#08080a]/85 px-2.5 py-0.5 border border-[#d4af37]/25">
                   {product.specifications.referencia}
                 </div>
 
                 {/* Quick overlay buttons */}
-                <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <button
                     onClick={() => onSelectProduct(product)}
-                    className="flex-1 py-2 px-3 text-[11px] uppercase tracking-wider font-medium text-[#f5ebd7] bg-[#0b0c10]/90 hover:bg-[#0b0c10] border border-[#d4af37]/40 rounded-sm cursor-pointer flex items-center justify-center gap-1.5 transition-colors"
+                    className="flex-1 py-2 px-3 text-[11px] uppercase tracking-wider font-semibold text-[#f5ebd7] bg-[#08080a]/92 hover:bg-[#08080a] border border-[#d4af37]/40 rounded-xs cursor-pointer flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <Eye className="w-3.5 h-3.5 text-[#d4af37]" />
                     <span>Ver Ficha</span>
                   </button>
                   <button
                     onClick={() => onAddToCart(product)}
-                    className="py-2 px-3 text-[11px] uppercase tracking-wider font-semibold text-[#0b0c10] bg-[#d4af37] hover:bg-[#e4c45b] rounded-sm cursor-pointer flex items-center justify-center gap-1 transition-colors"
+                    className="py-2 px-3 text-[11px] uppercase tracking-wider font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 rounded-xs cursor-pointer flex items-center justify-center gap-1 transition-all shadow-xs"
                     title="Añadir a la cesta"
                   >
                     <Plus className="w-3.5 h-3.5" />
@@ -227,35 +231,35 @@ export const TiendaSection: React.FC<TiendaSectionProps> = ({
               {/* Product Info */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.16em] text-[#8e897e] mb-1">
+                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#918a7c] mb-1.5">
                     <span>{product.subCategory}</span>
                     <span className="text-[#a89f8d]">{product.styleLabel}</span>
                   </div>
                   <h3
                     onClick={() => onSelectProduct(product)}
-                    className="font-display text-sm font-semibold text-[#ede8dc] group-hover:text-[#d4af37] transition-colors cursor-pointer line-clamp-1"
+                    className="font-display text-sm font-semibold text-[#f5ebd7] group-hover:text-[#d4af37] transition-colors cursor-pointer line-clamp-1"
                   >
                     {product.name}
                   </h3>
-                  <p className="mt-2 text-xs text-[#9c978b] line-clamp-2 leading-relaxed">
+                  <p className="mt-2 text-xs text-[#a0998b] line-clamp-2 leading-relaxed font-light">
                     {product.shortDesc}
                   </p>
                 </div>
 
-                <div className="mt-5 pt-4 border-t border-[#d4af37]/10 flex items-center justify-between">
+                <div className="mt-5 pt-4 border-t border-[#d4af37]/15 flex items-center justify-between">
                   <div>
-                    <span className="font-display text-base font-bold text-[#f5ebd7] tabular-nums">
+                    <span className="font-display text-lg font-bold text-[#faf5eb] tabular-nums">
                       {product.price} €
                     </span>
                     {product.originalPrice && (
-                      <span className="ml-2 text-xs text-[#6e695e] line-through tabular-nums">
+                      <span className="ml-2 text-xs text-[#736d61] line-through tabular-nums">
                         {product.originalPrice} €
                       </span>
                     )}
                   </div>
                   <button
                     onClick={() => onAddToCart(product)}
-                    className="px-3 py-1.5 text-xs uppercase tracking-[0.12em] font-medium text-[#0b0c10] bg-[#d4af37] hover:bg-[#e4c45b] rounded-sm cursor-pointer transition-colors"
+                    className="px-3.5 py-1.5 text-xs uppercase tracking-[0.14em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 rounded-xs cursor-pointer transition-all shadow-xs"
                   >
                     Comprar
                   </button>

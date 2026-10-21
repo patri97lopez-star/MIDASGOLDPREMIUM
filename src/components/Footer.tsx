@@ -12,7 +12,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
   return (
-    <footer className="bg-[#08090d] border-t border-[#d4af37]/20 text-xs text-[#8e897e]">
+    <footer className="bg-[#050608] border-t border-[#d4af37]/22 text-xs text-[#918a7c]">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand Info with Official Logo */}
@@ -20,11 +20,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenAdmin }) => {
             <div className="flex items-start">
               <MidasLogo size="sm" showSubtitle={true} className="items-start" />
             </div>
-            <p className="text-[#9c978b] leading-relaxed">
+            <p className="text-[#a49d8f] leading-relaxed font-light">
               Artesanía tradicional del Damasquinado toledano unida a la más distinguida alta joyería. Piezas embutidas con oro fino de 24K y 18K en Toledo, España.
             </p>
-            <div className="text-[11px] text-[#7e796e]">
-              Razón Social: <strong className="text-[#ede8dc]">{COMPANY_INFO.legalName}</strong>
+            <div className="text-[11px] text-[#7e786d]">
+              Razón Social: <strong className="text-[#ede8dc] font-medium">{COMPANY_INFO.legalName}</strong>
             </div>
           </div>
 

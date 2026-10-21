@@ -65,18 +65,21 @@ export const ContactoSection: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-20 pb-20">
+    <div className="space-y-20 pb-24">
       {/* Header Banner */}
-      <section className="relative py-16 border-b border-[#d4af37]/20 bg-[#0e1015]">
-        <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
-            Atención al Cliente & Sede Oficial
-          </span>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#f5ebd7]">
+      <section className="relative py-20 border-b border-[#d4af37]/20 bg-[#0a0b10]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#d4af37]/8 blur-[120px] pointer-events-none rounded-full"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141d]/70 border border-[#d4af37]/25">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
+            <span>Atención al Cliente & Sede Oficial</span>
+          </div>
+          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#faf5eb]">
             Contacto & Showroom en Toledo
           </h1>
-          <p className="text-sm sm:text-base text-[#9c978b] max-w-2xl mx-auto leading-relaxed">
-            Póngase en contacto directo con el equipo de <strong className="text-[#f3e5ab] font-medium">{COMPANY_INFO.name}</strong> ({COMPANY_INFO.legalName}). Estamos a su servicio para asesorarle, gestionar sus pedidos o recibirle en nuestra sede en la ciudad de Toledo.
+          <p className="text-sm sm:text-base text-[#a8a192] max-w-2xl mx-auto leading-relaxed font-light">
+            Póngase en contacto directo con el equipo de <strong className="text-[#f6eccd] font-normal">{COMPANY_INFO.name}</strong> ({COMPANY_INFO.legalName}). Estamos a su servicio para asesorarle, gestionar sus pedidos o recibirle en nuestra sede en la ciudad de Toledo.
           </p>
         </div>
       </section>
@@ -86,12 +89,12 @@ export const ContactoSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           {/* Left Column: Direct Info Cards */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-[#0e1015] border border-[#d4af37]/20 p-6 rounded-sm space-y-6">
+            <div className="bg-[#0e0f16] border border-[#d4af37]/20 p-7 rounded-xs space-y-6 shadow-[0_12px_36px_-10px_rgba(0,0,0,0.8)]">
               <div className="border-b border-[#d4af37]/15 pb-4">
                 <div className="text-[10px] uppercase tracking-[0.2em] text-[#d4af37] font-semibold">
                   Razón Social: {COMPANY_INFO.legalName}
                 </div>
-                <h3 className="font-display text-lg font-bold text-[#f5ebd7] mt-0.5">
+                <h3 className="font-display text-lg font-bold text-[#faf5eb] mt-0.5">
                   Sede Central & Taller Artesano
                 </h3>
               </div>
@@ -308,9 +311,9 @@ export const ContactoSection: React.FC = () => {
                   <div className="pt-2">
                     <button
                       type="submit"
-                      className="w-full sm:w-auto px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-semibold text-[#0b0c10] bg-gradient-to-r from-[#eed588] via-[#d4af37] to-[#b38612] hover:brightness-110 active:scale-98 transition-all rounded-sm cursor-pointer flex items-center justify-center gap-2"
+                      className="w-full sm:w-auto px-9 py-4 text-xs uppercase tracking-[0.2em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 active:scale-98 transition-all shadow-[0_4px_20px_rgba(212,175,55,0.4)] rounded-xs cursor-pointer flex items-center justify-center gap-2"
                     >
-                      <Send className="w-4 h-4 text-[#0b0c10]" />
+                      <Send className="w-4 h-4 text-[#08080a]" />
                       <span>Enviar Consulta a {COMPANY_INFO.name}</span>
                     </button>
                   </div>

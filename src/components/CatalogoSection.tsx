@@ -50,24 +50,27 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
   };
 
   return (
-    <div className="space-y-16 pb-20">
+    <div className="space-y-16 pb-24">
       {/* Header Banner */}
-      <section className="relative py-16 border-b border-[#d4af37]/20 bg-[#0e1015]">
-        <div className="max-w-5xl mx-auto px-6 text-center space-y-4">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold">
-            Fondo Documental & Lookbook Oficial
-          </span>
-          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#f5ebd7]">
+      <section className="relative py-20 border-b border-[#d4af37]/20 bg-[#0a0b10]">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-[#d4af37]/8 blur-[120px] pointer-events-none rounded-full"></div>
+
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141d]/70 border border-[#d4af37]/25">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]"></span>
+            <span>Fondo Documental & Lookbook Oficial</span>
+          </div>
+          <h1 className="font-display text-3xl sm:text-5xl font-bold text-[#faf5eb]">
             Catálogo General Midas Gold Toledo
           </h1>
-          <p className="text-sm sm:text-base text-[#9c978b] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#a8a192] max-w-3xl mx-auto leading-relaxed font-light">
             Consulte todas las categorías reales de nuestro taller: desde pendientes, gargantillas, pulseras y anillos de mujer, hasta encendedores Zippos, gemelos y marroquinería de caballero, pasando por platos ceremoniales y arquetas de nogal.
           </p>
 
           <div className="pt-4 flex justify-center">
             <button
               onClick={() => setShowDownloadModal(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 text-xs uppercase tracking-[0.2em] font-medium text-[#f3e5ab] border border-[#d4af37]/50 hover:bg-[#d4af37]/10 transition-all rounded-sm cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-2 px-7 py-3 text-xs uppercase tracking-[0.2em] font-semibold text-[#f5ebd7] border border-[#d4af37]/45 hover:border-[#d4af37] hover:bg-[#d4af37]/15 bg-[#10121a]/60 backdrop-blur-xs transition-all rounded-xs cursor-pointer shadow-xs"
             >
               <Download className="w-4 h-4 text-[#d4af37]" />
               <span>Descargar Catálogo Completo (PDF Oficial Midas)</span>
@@ -80,16 +83,16 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
       <section className="max-w-7xl mx-auto px-6 space-y-6">
         {/* Main Categories Row */}
         <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pb-6 border-b border-[#d4af37]/15">
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0">
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0">
             <button
               onClick={() => {
                 setSelectedMainCategory('todos');
                 setSelectedSubCategory('todos');
               }}
-              className={`px-4 py-2 text-xs uppercase tracking-wider font-medium rounded-sm whitespace-nowrap transition-colors cursor-pointer ${
+              className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xs whitespace-nowrap transition-all cursor-pointer ${
                 selectedMainCategory === 'todos'
-                  ? 'bg-[#d4af37] text-[#0b0c10] font-semibold shadow-sm'
-                  : 'bg-[#12141c] text-[#8e897e] hover:text-[#e8e6e3] border border-[#d4af37]/10'
+                  ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-[0_2px_12px_rgba(212,175,55,0.35)]'
+                  : 'bg-[#10121a] text-[#938c7f] hover:text-[#ede8dc] border border-[#d4af37]/15 hover:border-[#d4af37]/40'
               }`}
             >
               Todo el Catálogo
@@ -103,10 +106,10 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
                     setSelectedMainCategory(cat.id);
                     setSelectedSubCategory('todos');
                   }}
-                  className={`px-4 py-2 text-xs uppercase tracking-wider font-medium rounded-sm whitespace-nowrap transition-colors cursor-pointer ${
+                  className={`px-4 py-2.5 text-xs uppercase tracking-wider font-semibold rounded-xs whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#d4af37] text-[#0b0c10] font-semibold shadow-sm'
-                      : 'bg-[#12141c] text-[#8e897e] hover:text-[#e8e6e3] border border-[#d4af37]/10'
+                      ? 'bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] text-[#08080a] shadow-[0_2px_12px_rgba(212,175,55,0.35)]'
+                      : 'bg-[#10121a] text-[#938c7f] hover:text-[#ede8dc] border border-[#d4af37]/15 hover:border-[#d4af37]/40'
                   }`}
                 >
                   {cat.name}
@@ -117,13 +120,13 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
 
           {/* Search bar */}
           <div className="relative min-w-[260px]">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8e897e]" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#8e887a]" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Buscar pieza, referencia (MG-TO...)..."
-              className="w-full bg-[#12141c] border border-[#d4af37]/20 rounded-sm pl-10 pr-4 py-2 text-xs text-[#ede8dc] placeholder-[#6e695e] focus:outline-none focus:border-[#d4af37]"
+              className="w-full bg-[#10121a] border border-[#d4af37]/25 rounded-xs pl-10 pr-4 py-2.5 text-xs text-[#faf5eb] placeholder-[#7a7467] focus:outline-none focus:border-[#d4af37] transition-colors"
             />
           </div>
         </div>
@@ -191,29 +194,29 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="bg-[#0e1015] border border-[#d4af37]/15 rounded-sm overflow-hidden flex flex-col group hover:border-[#d4af37]/45 transition-all"
+              className="bg-[#0e0f16] border border-[#d4af37]/20 rounded-xs overflow-hidden flex flex-col group hover:border-[#d4af37]/55 hover:shadow-[0_14px_40px_-12px_rgba(212,175,55,0.22)] transition-all duration-400"
             >
               {/* Product Visual */}
               <div
                 onClick={() => onSelectProduct(product)}
-                className="relative aspect-[4/3] bg-[#12141c] overflow-hidden cursor-pointer"
+                className="relative aspect-[4/3] bg-[#141620] overflow-hidden cursor-pointer"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0e1015] via-transparent to-transparent opacity-70"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e0f16] via-transparent to-transparent opacity-70"></div>
                 {product.tag && (
-                  <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.16em] px-2.5 py-1 bg-[#0b0c10]/85 border border-[#d4af37]/30 text-[#f3e5ab]">
+                  <div className="absolute top-3 left-3 text-[10px] uppercase tracking-[0.2em] px-2.5 py-1 bg-[#08080a]/90 border border-[#d4af37]/40 text-[#f6eccd] font-semibold shadow-xs">
                     {product.tag}
                   </div>
                 )}
-                <div className="absolute bottom-3 right-3 text-[11px] font-mono text-[#d4af37] bg-[#0b0c10]/80 px-2 py-0.5 border border-[#d4af37]/20">
+                <div className="absolute bottom-3 right-3 text-[11px] font-mono text-[#d4af37] bg-[#08080a]/85 px-2.5 py-0.5 border border-[#d4af37]/25">
                   {product.specifications.referencia}
                 </div>
-                <div className="absolute top-3 right-3 text-[10px] uppercase tracking-wider text-[#d8ceba] bg-[#0b0c10]/80 px-2 py-0.5 border border-[#d4af37]/20">
+                <div className="absolute top-3 right-3 text-[10px] uppercase tracking-wider text-[#d8ceba] bg-[#08080a]/85 px-2.5 py-0.5 border border-[#d4af37]/25">
                   {product.styleLabel}
                 </div>
               </div>
@@ -221,9 +224,9 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
               {/* Product Info */}
               <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                 <div>
-                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#8e897e] mb-1">
+                  <div className="flex items-center justify-between text-[11px] uppercase tracking-[0.2em] text-[#918a7c] mb-1.5">
                     <span>{product.categoryLabel}</span>
-                    <span className="text-[#d4af37]">{product.subCategory}</span>
+                    <span className="text-[#d4af37] font-semibold">{product.subCategory}</span>
                   </div>
                   <h3
                     onClick={() => onSelectProduct(product)}
@@ -231,25 +234,25 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
                   >
                     {product.name}
                   </h3>
-                  <p className="mt-2 text-xs text-[#9c978b] leading-relaxed line-clamp-2">
+                  <p className="mt-2 text-xs text-[#a0998b] leading-relaxed line-clamp-2 font-light">
                     {product.shortDesc}
                   </p>
                 </div>
 
                 {/* Technical Specifications Snapshot */}
-                <div className="pt-3 border-t border-[#d4af37]/10 space-y-1.5 text-[11px] text-[#8e897e]">
+                <div className="pt-3 border-t border-[#d4af37]/15 space-y-1.5 text-[11px] text-[#918a7c]">
                   <div className="flex justify-between">
                     <span>Pureza de Oro:</span>
-                    <span className="text-[#d8ceba] font-medium">{product.specifications.oro}</span>
+                    <span className="text-[#ede8dc] font-medium">{product.specifications.oro}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Espesor de Oro:</span>
-                    <span className="text-[#d8ceba] font-medium">{product.specifications.espesor}</span>
+                    <span className="text-[#ede8dc] font-medium">{product.specifications.espesor}</span>
                   </div>
                   {product.specifications.dimensiones && (
                     <div className="flex justify-between">
                       <span>Dimensiones:</span>
-                      <span className="text-[#d8ceba]">{product.specifications.dimensiones}</span>
+                      <span className="text-[#ede8dc]">{product.specifications.dimensiones}</span>
                     </div>
                   )}
                 </div>
@@ -257,20 +260,20 @@ export const CatalogoSection: React.FC<CatalogoSectionProps> = ({
                 {/* Actions */}
                 <div className="pt-4 border-t border-[#d4af37]/15 flex items-center justify-between">
                   <div>
-                    <span className="font-display text-lg font-bold text-[#f5ebd7] tabular-nums">
+                    <span className="font-display text-lg font-bold text-[#faf5eb] tabular-nums">
                       {product.price} €
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() => onSelectProduct(product)}
-                      className="px-3 py-1.5 text-xs text-[#bbb5a7] hover:text-[#f3e5ab] border border-[#d4af37]/20 hover:border-[#d4af37]/50 rounded-sm cursor-pointer transition-colors"
+                      className="px-3 py-1.5 text-xs text-[#c8c2b5] hover:text-[#ffffff] border border-[#d4af37]/25 hover:border-[#d4af37] rounded-xs cursor-pointer transition-colors"
                     >
                       Ficha Técnica
                     </button>
                     <button
                       onClick={() => onAddToCart(product)}
-                      className="px-3.5 py-1.5 text-xs uppercase tracking-[0.12em] font-medium text-[#0b0c10] bg-[#d4af37] hover:bg-[#e4c45b] rounded-sm cursor-pointer transition-colors"
+                      className="px-4 py-1.5 text-xs uppercase tracking-[0.14em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9028] hover:brightness-110 rounded-xs cursor-pointer transition-all shadow-xs"
                     >
                       Comprar
                     </button>
