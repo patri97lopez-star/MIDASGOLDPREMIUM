@@ -3,7 +3,7 @@ import { Product, Order, OrderStatus, CustomerSummary } from '../types';
 import { PRODUCTS } from '../data/products';
 import { INITIAL_DEMO_ORDERS } from '../data/demoOrders';
 
-const STORAGE_KEY = 'midasgold_demo_store_v1';
+const STORAGE_KEY = 'midasgold_demo_store_v2';
 
 interface DemoStoreContextType {
   products: Product[];
