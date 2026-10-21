@@ -12,6 +12,7 @@ import {
   Truck,
   RotateCcw,
   ShieldCheck,
+  Users,
 } from 'lucide-react';
 
 export const ContactoSection: React.FC = () => {
@@ -319,6 +320,112 @@ export const ContactoSection: React.FC = () => {
                   </div>
                 </form>
               )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nuestro Equipo - Atención Directa */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141e]/80 border border-[#d4af37]/30">
+            <Users className="w-3.5 h-3.5 text-[#d4af37]" />
+            <span>ATENCIÓN DIRECTA · DYD TOLEDO</span>
+          </div>
+          <h3 className="font-serif text-3xl sm:text-4xl font-bold text-[#faf5eb]">
+            NUESTRO <span className="gold-text-gradient">EQUIPO</span>
+          </h3>
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto my-2"></div>
+          <p className="text-sm text-[#bfb8a8] font-editorial italic max-w-xl mx-auto">
+            «Si prefiere un contacto directo por correo electrónico con nuestros directores y asesores, estamos a su entera disposición.»
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Enrique Fernández */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all flex flex-col justify-between group shadow-lg">
+            <div>
+              <div className="w-14 h-14 rounded-full bg-[#151722] border-2 border-[#d4af37]/50 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-lg font-bold text-[#fae7b1]">EF</span>
+              </div>
+              <h4 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                ENRIQUE FERNÁNDEZ
+              </h4>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                CEO Y FUNDADOR
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:enrique@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:underline"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>enrique@dydtoledo.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Paola de la Varga */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all flex flex-col justify-between group shadow-lg">
+            <div>
+              <div className="w-14 h-14 rounded-full bg-[#151722] border-2 border-[#d4af37]/50 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-lg font-bold text-[#fae7b1]">PV</span>
+              </div>
+              <h4 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                PAOLA DE LA VARGA
+              </h4>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                COMERCIAL
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:comercial@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:underline"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>comercial@dydtoledo.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Manuel Fernández */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all flex flex-col justify-between group shadow-lg">
+            <div>
+              <div className="w-14 h-14 rounded-full bg-[#151722] border-2 border-[#d4af37]/50 flex items-center justify-center mb-5 shadow-[0_0_15px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-lg font-bold text-[#fae7b1]">MF</span>
+              </div>
+              <h4 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                MANUEL FERNÁNDEZ
+              </h4>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                DIRECTOR COMERCIAL
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:manuel@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:underline"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>manuel@dydtoledo.com</span>
+              </a>
             </div>
           </div>
         </div>

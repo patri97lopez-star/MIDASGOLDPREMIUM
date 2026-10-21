@@ -24,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'midas', label: 'Midas' },
     { id: 'catalogo', label: 'Catálogo' },
     { id: 'tienda', label: 'Tienda' },
+    { id: 'equipo', label: 'Nuestro Equipo' },
     { id: 'contacto', label: 'Contacto' },
   ];
 

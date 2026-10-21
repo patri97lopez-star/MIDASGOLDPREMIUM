@@ -1,4 +1,4 @@
-export type ActiveTab = 'home' | 'midas' | 'catalogo' | 'tienda' | 'contacto';
+export type ActiveTab = 'home' | 'midas' | 'catalogo' | 'tienda' | 'equipo' | 'contacto';
 
 export type ProductStyle = 'arabe' | 'renacimiento' | 'geometrico';
 

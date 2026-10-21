@@ -12,6 +12,7 @@ import { MidasSection } from './components/MidasSection';
 import { CatalogoSection } from './components/CatalogoSection';
 import { TiendaSection } from './components/TiendaSection';
 import { ContactoSection } from './components/ContactoSection';
+import { EquipoSection } from './components/EquipoSection';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { CartDrawer } from './components/CartDrawer';
 import { Footer } from './components/Footer';
@@ -114,6 +115,10 @@ function MidasStoreApp() {
             onSelectProduct={setSelectedProduct}
             onAddToCart={handleAddToCart}
           />
+        )}
+
+        {activeTab === 'equipo' && (
+          <EquipoSection onNavigate={setActiveTab} />
         )}
 
         {activeTab === 'contacto' && (

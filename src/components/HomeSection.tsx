@@ -13,6 +13,8 @@ import {
   ChevronRight,
   Pause,
   Play,
+  Mail,
+  Users,
 } from 'lucide-react';
 
 interface HomeSectionProps {
@@ -476,6 +478,122 @@ export const HomeSection: React.FC<HomeSectionProps> = ({
             />
             <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#0e0f16] via-transparent to-transparent"></div>
           </div>
+        </div>
+      </section>
+
+      {/* Nuestro Equipo Section */}
+      <section className="max-w-7xl mx-auto px-6">
+        <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
+          <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.28em] text-[#d4af37] font-semibold py-1 px-4 rounded-full bg-[#12141e]/80 border border-[#d4af37]/30">
+            <Users className="w-3.5 h-3.5 text-[#d4af37]" />
+            <span>DYD TOLEDO · ATENCIÓN DIRECTA</span>
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#faf5eb]">
+            NUESTRO <span className="gold-text-gradient">EQUIPO</span>
+          </h2>
+          <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto my-2"></div>
+          <p className="text-sm sm:text-base text-[#bfb8a8] font-editorial italic">
+            «Un trato personal, exclusivo y directo con quienes lideramos la pasión por el damasquinado toledano.»
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Enrique Fernández */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all hover:shadow-[0_12px_40px_-10px_rgba(212,175,55,0.2)] flex flex-col justify-between group">
+            <div>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1a1c26] to-[#0a0b10] border-2 border-[#d4af37]/50 group-hover:border-[#d4af37] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-xl font-bold tracking-widest text-[#fae7b1]">EF</span>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                ENRIQUE FERNÁNDEZ
+              </h3>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                CEO Y FUNDADOR
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:enrique@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:text-[#ffffff] transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>enrique@dydtoledo.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Paola de la Varga */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all hover:shadow-[0_12px_40px_-10px_rgba(212,175,55,0.2)] flex flex-col justify-between group">
+            <div>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1a1c26] to-[#0a0b10] border-2 border-[#d4af37]/50 group-hover:border-[#d4af37] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-xl font-bold tracking-widest text-[#fae7b1]">PV</span>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                PAOLA DE LA VARGA
+              </h3>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                COMERCIAL
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:comercial@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:text-[#ffffff] transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>comercial@dydtoledo.com</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Manuel Fernández */}
+          <div className="bg-[#0e0f16] border border-[#d4af37]/25 hover:border-[#d4af37]/60 rounded-xs p-8 transition-all hover:shadow-[0_12px_40px_-10px_rgba(212,175,55,0.2)] flex flex-col justify-between group">
+            <div>
+              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1a1c26] to-[#0a0b10] border-2 border-[#d4af37]/50 group-hover:border-[#d4af37] flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+                <span className="font-serif text-xl font-bold tracking-widest text-[#fae7b1]">MF</span>
+              </div>
+              <h3 className="font-serif text-xl font-bold text-[#fbf7ee] group-hover:text-[#fae7b1] transition-colors">
+                MANUEL FERNÁNDEZ
+              </h3>
+              <p className="text-xs uppercase tracking-[0.22em] font-semibold text-[#d4af37] mt-1 mb-4">
+                DIRECTOR COMERCIAL
+              </p>
+              <div className="my-4 p-3.5 rounded-xs bg-[#12131c] border-l-2 border-[#d4af37]">
+                <p className="font-editorial italic text-base text-[#fae7b1]">
+                  «Será un placer atenderle.»
+                </p>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-[#d4af37]/15">
+              <a
+                href="mailto:manuel@dydtoledo.com"
+                className="flex items-center gap-2 text-xs font-mono text-[#e6d08c] hover:text-[#ffffff] transition-colors"
+              >
+                <Mail className="w-3.5 h-3.5 text-[#d4af37]" />
+                <span>manuel@dydtoledo.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-10">
+          <button
+            onClick={() => onNavigate('equipo')}
+            className="inline-flex items-center gap-2 px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-bold text-[#08080a] bg-gradient-to-r from-[#fae7b1] via-[#d4af37] to-[#ba9527] hover:brightness-110 active:scale-98 transition-all rounded-xs shadow-[0_4px_20px_rgba(212,175,55,0.3)]"
+          >
+            <span>Conocer a Todo Nuestro Equipo</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
         </div>
       </section>
 
